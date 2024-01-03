@@ -6,13 +6,13 @@ const Footer = () => {
       <div className="flex justify-between">
         <div>
           <Link to='/' >
-            <p>Ambula</p>
+            <p className="uppercase text-xl lg:text-2xl">Ambula</p>
           </Link>
         </div>
 
         <div className="space-y-3">
           <p className="text-lg lg:text-xl uppercase">Quick Links</p>
-          <ul className="text-sm space-y-3  lg:text-base">
+          <ul className="text-sm space-y-3 md:text-base  lg:text-xl">
           <li><Link to='/'>Home</Link></li>
           <li> <Link to='about'>About</Link></li>
           <li> <Link to='contact'>Contact</Link></li>

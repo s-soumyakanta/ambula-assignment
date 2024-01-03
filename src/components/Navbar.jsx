@@ -38,6 +38,11 @@ const Navbar = () => {
 			slug: "movies",
 			name: "Movies",
 		},
+		{
+			id: 6,
+			slug: "contact",
+			name: "Contact",
+		},
 	];
 
 	return (
@@ -75,7 +80,7 @@ const Navbar = () => {
 									     key={id} 
 										 to={slug} 
 									    >
-									    <li className="my-4 text-center p-3 shadow-sm rounded-md font-bold hover:underline">{name}</li>
+									    <li className="my-4 text-center p-3 shadow-sm  font-bold hover:underline">{name}</li>
 									   </Link>
 									);
 								})}
@@ -92,7 +97,7 @@ const Navbar = () => {
 							onClick={(e) => e.stopPropagation()}
 							className='w-60 bg-blue-950  flex justify-center pt-10 h-full shadow-xl p-4 lg:hidden'
 						>
-							<ul className='space-y-10  w-full'>
+							<ul className='space-y-16  w-full'>
 								{navItems.map(({ id, slug, name }) => {
 									return (
 									   <Link
@@ -100,7 +105,7 @@ const Navbar = () => {
 										   to={slug} 
 										   onClick={handleClick}
 										>
-									    <li className="bg-red-500 text-white  uppercase my-4 text-center p-3 shadow-sm rounded-full font-bold">{name}</li>
+									    <li className="bg-red-500 text-white  uppercase my-4 text-center p-3 shadow-sm rounded-xl font-bold">{name}</li>
 									   </Link>
 									);
 								})}
