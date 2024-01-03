@@ -47,7 +47,7 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav id='nav' className='flex w-full items-center justify-between p-4 z-10 px-12 py-8 lg:p-2 bg-white  shadow-xl lg:px-16  '>
+			<nav id='nav' className='flex w-full fixed top-0 items-center justify-between p-4  z-10 px-12 py-8 lg:p-2 bg-white  shadow-xl lg:px-16  '>
 				<div>
 					<div className="cursor-pointer font-bold">
 						<Link to='/'><img src={ambula} alt="ambula" className="w-24 lg:w-36" /></Link>

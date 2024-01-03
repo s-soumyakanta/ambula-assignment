@@ -4,8 +4,8 @@ import {Navbar,Footer} from './components/index'
 //used App component used as a layout component for the application
 const App = () => {
   return (
-    <div className="relative">
-      <div className="sticky top-0">
+    <div>
+      <div className="my-36">
         <Navbar />
       </div>
 
