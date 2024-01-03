@@ -45,7 +45,7 @@ const Navbar = () => {
 			<nav id='nav' className='flex w-full items-center justify-between p-4 px-8 lg:p-2 bg-white shadow-xl lg:px-16  '>
 				<div>
 					<div className="cursor-pointer font-bold">
-						<Link to='/'><img src={ambula} alt="ambula" className="w-36" /></Link>
+						<Link to='/'><img src={ambula} alt="ambula" className="w-24 lg:w-36" /></Link>
 					</div>
 				</div>
 
@@ -73,8 +73,8 @@ const Navbar = () => {
 									return (
 									   <Link
 									     key={id} 
-										   to={slug} 
-										  >
+										 to={slug} 
+									    >
 									    <li className="my-4 text-center p-3 shadow-sm rounded-md font-bold hover:underline">{name}</li>
 									   </Link>
 									);
