@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="flex flex-col justify-center items-center mt-10">
+    <div className="flex flex-col justify-center items-center my-10">
       <div className="text-center space-y-10 max-w-xl">
         <header>
            <h1 className="font-bold text-2xl">About AmbulaHub: <br /> Your Health, Your Hub</h1>
