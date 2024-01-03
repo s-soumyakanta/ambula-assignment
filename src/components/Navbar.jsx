@@ -80,7 +80,7 @@ const Navbar = () => {
 									     key={id} 
 										 to={slug} 
 									    >
-									    <li className="my-4 text-center p-3 shadow-sm  font-bold hover:underline">{name}</li>
+									    <li className="my-4 text-center text-base p-3 shadow-sm  font-bold hover:underline lg:text-lg">{name}</li>
 									   </Link>
 									);
 								})}
