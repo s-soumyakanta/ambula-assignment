@@ -39,7 +39,7 @@ const ShopHeader = () => {
 
     {
         isOpen && createPortal(
-        <div className='absolute top-0 w-full z-20 min-h-screen flex justify-center items-center bg-slate-100'>
+        <div className=' fixed top-0 w-full z-20 min-h-screen flex justify-center items-center bg-slate-100'>
            <Cart />
            <div onClick={handleClick} className='absolute cursor-pointer top-4 right-4'>
             <CloseIcon style={{fontSize:"2rem"}} />

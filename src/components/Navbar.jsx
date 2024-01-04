@@ -90,7 +90,7 @@ const Navbar = () => {
 				createPortal(
 					<div
 						onClick={handleClick}
-						className='w-full h-full block z-20 bg-white absolute bg-opacity-60  top-0 lg:hidden'
+						className='w-full h-full block z-20 bg-white fixed bg-opacity-60  top-0 lg:hidden'
 					>
 						<div
 							onClick={(e) => e.stopPropagation()}
