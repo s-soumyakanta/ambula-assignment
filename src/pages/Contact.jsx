@@ -60,7 +60,7 @@ const Contact = () => {
     <>
     <div className='w-full flex flex-col space-y-6 items-center justify-center h-screen -mt-20'>
       <div>
-        <h1 className='font-bold text-4xl uppercase text-red-500'>Contact</h1>
+        <h1 className='font-bold text-4xl uppercase text-red-500'>Feedback</h1>
       </div>
       <form 
            onSubmit={handleSubmit}
@@ -74,29 +74,32 @@ const Contact = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
+            placeholder='Enter name'
             className='text-black rounded-sm pl-2'
           />
         </div>
 
         <div className='flex flex-col space-y-2'>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email</label>
           <input
             type="text"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
+            placeholder='Enter email address'
             className='text-black rounded-sm pl-2'
           />
         </div>
 
         <div className='flex flex-col space-y-2'>
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">Feedback</label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
+            placeholder='Write your feedback...'
             className='text-black rounded-sm pl-2'
           />
         </div>
