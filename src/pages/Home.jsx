@@ -5,7 +5,7 @@ const Home = () => {
     {
       id:1,
       text: "Use it to organize appointments and manage medicine doses effortlessly.",
-      btnText:"Explore Health Tasks",
+      btnText:"Manage Health Tasks",
       slug:"/todo"
     },
     {

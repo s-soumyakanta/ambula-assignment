@@ -1,10 +1,14 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import { useState } from "react";
 import menu from "../assets/menu.png";
-import close from "../assets/close.png";
 import { createPortal } from "react-dom";
 import { Link } from "react-router-dom";
-import ambula from '../assets/ambula.png'
+import ambula from '../assets/ambula.png';
+import CloseIcon from '@mui/icons-material/Close';
+
+
+
+
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -47,7 +51,7 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav id='nav' className='flex w-full items-center justify-between p-4 px-8 lg:p-2 bg-white shadow-xl lg:px-16  '>
+			<nav id='nav' className='flex w-full fixed top-0 items-center justify-between p-4  z-10 px-12 py-8 lg:p-2 bg-white  shadow-xl lg:px-16  '>
 				<div>
 					<div className="cursor-pointer font-bold">
 						<Link to='/'><img src={ambula} alt="ambula" className="w-24 lg:w-36" /></Link>
@@ -56,12 +60,7 @@ const Navbar = () => {
 
 				<div className='z-20 lg:hidden'>
 					{isOpen ? (
-						<img
-							src={close}
-							alt='close menu'
-							className='cursor-pointer'
-							onClick={handleClick}
-						/>
+						''
 					) : (
 						<img
 							src={menu}
@@ -80,7 +79,7 @@ const Navbar = () => {
 									     key={id} 
 										 to={slug} 
 									    >
-									    <li className="my-4 text-center p-3 shadow-sm  font-bold hover:underline">{name}</li>
+									    <li className="my-4 text-center text-base p-3 shadow-sm  font-bold hover:underline lg:text-lg">{name}</li>
 									   </Link>
 									);
 								})}
@@ -91,7 +90,7 @@ const Navbar = () => {
 				createPortal(
 					<div
 						onClick={handleClick}
-						className='w-full h-full block bg-white absolute bg-opacity-60  top-0 lg:hidden'
+						className='w-full h-full block z-20 bg-white fixed bg-opacity-60  top-0 lg:hidden'
 					>
 						<div
 							onClick={(e) => e.stopPropagation()}
@@ -111,6 +110,9 @@ const Navbar = () => {
 								})}
 							</ul>
 						</div>
+						<div className="absolute top-4 right-4 bg-red-500 rounded-full text-white p-2 cursor-pointer">
+							<CloseIcon />
+					    </div>
 					</div>,
 					document.body
 				)}
