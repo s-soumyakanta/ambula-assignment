@@ -1,10 +1,14 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import { useState } from "react";
 import menu from "../assets/menu.png";
-import close from "../assets/close.png";
 import { createPortal } from "react-dom";
 import { Link } from "react-router-dom";
-import ambula from '../assets/ambula.png'
+import ambula from '../assets/ambula.png';
+import CloseIcon from '@mui/icons-material/Close';
+
+
+
+
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -56,12 +60,7 @@ const Navbar = () => {
 
 				<div className='z-20 lg:hidden'>
 					{isOpen ? (
-						<img
-							src={close}
-							alt='close menu'
-							className='cursor-pointer'
-							onClick={handleClick}
-						/>
+						''
 					) : (
 						<img
 							src={menu}
@@ -91,7 +90,7 @@ const Navbar = () => {
 				createPortal(
 					<div
 						onClick={handleClick}
-						className='w-full h-full block bg-white absolute bg-opacity-60  top-0 lg:hidden'
+						className='w-full h-full block z-20 bg-white absolute bg-opacity-60  top-0 lg:hidden'
 					>
 						<div
 							onClick={(e) => e.stopPropagation()}
@@ -111,6 +110,9 @@ const Navbar = () => {
 								})}
 							</ul>
 						</div>
+						<div className="absolute top-4 right-4 bg-red-500 rounded-full text-white p-2 cursor-pointer">
+							<CloseIcon />
+					    </div>
 					</div>,
 					document.body
 				)}
